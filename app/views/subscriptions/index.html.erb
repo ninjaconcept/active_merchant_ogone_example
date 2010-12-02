@@ -1,0 +1,17 @@
+<% title "Subscriptions" %>
+
+<table>
+  <tr>
+    <th>Amount</th>
+  </tr>
+  <% for subscription in @subscriptions %>
+    <tr>
+      <td><%=h subscription.amount %></td>
+      <td><%= link_to "Show", subscription %></td>
+      <td><%= link_to "Edit", edit_subscription_path(subscription) %></td>
+      <td><%= link_to "Destroy", subscription, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "New Subscription", new_subscription_path %></p>

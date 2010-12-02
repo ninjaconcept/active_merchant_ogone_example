@@ -1,0 +1,12 @@
+<% title "Subscription" %>
+
+<p>
+  <strong>Amount:</strong>
+  <%=h @subscription.amount %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_subscription_path(@subscription) %> |
+  <%= link_to "Destroy", @subscription, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", subscriptions_path %>
+</p>
